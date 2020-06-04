@@ -1,0 +1,150 @@
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style text="css/type">
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+}
+
+
+hr {width: 100%;height: 6px;background-color:#0A3901;border: 0 none;}
+
+.column {
+  float: left;
+  width: 25%;
+}
+.column:hover {
+  box-shadow:0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  margin: 8px;
+  text-align: center;
+}
+.about-section {
+  padding: 50px;
+  text-align: center;
+  background-color: #339161;
+  color: white;
+}
+.container {
+  padding: 0 16px;
+}
+.container::after, .row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+.title {
+  color: grey;
+}
+.button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+}
+.button:hover {
+  background-color: #555;
+}
+@media screen and (max-width: 650px) {
+  .column {
+    width: 100%;
+    display: block;
+  }
+}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+}
+li {
+  float: left;
+}
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+li a:hover {
+  background-color: #111;
+}
+.active {
+  background-color: #4CAF50;
+}
+</style>
+</head>
+<body bgcolor=#f7f9f>
+
+
+<ul>
+  <li><a href="#mainpage">Home</a></li>
+  <li><a href="#mathriddles">Math Riddles</a></li>
+  <li><a href="#logicpuzzles">Logic Puzzles</a></li>
+  <li><a class="active" href="aboutus.html">About Us</a></li>
+</ul>
+
+<div class="about-section">
+  <h1>About Us</h1>
+  <p>The Creators of This Website</p>
+</div>
+<hr></hr>
+<h2 style="text-align:center">Our 3 Members</h2>
+<div class="row">
+  <div class="column">
+    <div class="card">
+      <img src="images/ourboss.jpeg" alt="ourboss" style="width:100%">
+      <div class="container">
+        <h2>Our Boss</h2>
+        <p class="title">CEO & Founder</p>
+        <p>Strong and smart. </p>
+        <p>superstrongturtle@joshua.eden</p>
+        <p><button class="button"> <a href=""> </a> Contact</button></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="column">
+    <div class="card">
+      <img src="images/joshua.png" alt="joshua" style="width:100%">
+      <div class="container">
+        <h2>Joshua Wang</h2>
+        <p class="title">Cooking-CEO</p>
+        <p>My three stars michelin cooking show</p>
+        <p>joswan25@kas.tw</p>
+        <p><button class="button">Contact</button></p>
+      </div>
+    </div>
+  </div>
+ 
+
+
+  <div class="column">
+    <div class="card">
+      <img src="images/eden.png" alt="eden" style="width:100%">
+      <div class="container">
+        <h2>Eden Sun</h2>
+        <p class="title">Worker</p>
+        <p>Ok.</p>
+        <p>edesun25@kas.tw</p>
+        <p><button class="button">Contact</button></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
