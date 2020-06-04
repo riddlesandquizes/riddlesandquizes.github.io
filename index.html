@@ -1,0 +1,389 @@
+<html>
+<head>
+	<title> joshua and eden's summative website </title>
+<STYLE text="css/type">
+#navbar {background-color: ghostwhite;
+  width: 100%;z-index: 100;display: inline-block;
+  margin: 0;padding: 3px 0 0 0;
+}
+#navbar a {float: left;
+  font-size: 16px;color: lightslategrey;text-align: center;
+  padding: 14px;text-decoration: none;
+  transition-duration: 0.4s;min-width: 100px;
+}
+#navbar a:nth-child(1) {margin-left: 2%;
+}
+.dropdown {float: left;overflow: hidden;
+}
+.dropdown .dropbtn {font-size: 16px;
+	border: none;outline: none;color: lightslategrey;
+    padding: 14px;background-color: inherit;
+    font-family: inherit;margin: 0;
+    transition-duration: 0.4s;min-width: 100px;
+}
+#navbar a:hover,.dropdown .dropbtn:hover, .dropdown .dropbtn:focus {
+  color: black; 
+}
+
+#navbar .content {
+    display: none;
+    position: absolute;
+    background-color: mintcream;
+    min-width: 160px;
+    max-width: 260px;
+    box-shadow: 0px 4px 4px 0px rgba(0,0,0,0.2);
+    z-index: 10;
+}
+
+#navbar .content a {
+    float: none;
+    color: mintcream;
+    padding: 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+    transition-duration: 0s;
+    margin-left: 0;
+    background-color: steelblue;
+}
+
+#navbar .content p {
+  float: none;
+    color: steelblue;
+    padding: 16px 16px 8px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+    transition-duration: 0s;
+    margin-left: 0;
+    line-height: 1.7em;
+}
+
+#navbar .content a:hover, 
+#navbar .content a:focus {
+  opacity: 0.8;
+}
+
+#navbar .dropdown:hover .content,
+#navbar .dropdown:focus .content {
+    display: block;
+}
+#navbar .right {
+  float: right;
+  margin-right: 2%;
+}
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+.sticky ~ .b-content {
+  padding-top: 50px;
+}
+.slideshow {
+	width: 100%;
+	text-align: center;
+	overflow: hidden;
+	margin: 0;
+	position: relative;
+}
+
+.slides {
+	display: flex;
+	height: 210px;
+	overflow: hidden;
+	position: relative;
+}
+
+.slides img {
+	width: 100%;
+	position: absolute;
+}
+
+@keyframes slide{
+0% {right: 100%;}
+10%{right: 0;}
+20% {right: 0;}
+30% {right: -100%;}
+100% {right: -100%;}
+}
+
+#slide1 {
+	animation: slide 20s ease infinite;
+}
+
+#slide2 {
+	animation: slide 20s ease infinite;
+	animation-delay: 4s;
+}
+
+#slide3 {
+	animation: slide 20s ease infinite;
+	animation-delay: 8s;
+}
+#slide4 {
+  animation: slide 20s ease infinite;
+  animation-delay: 12s;
+}
+#slide5 {
+  animation: slide 20s ease infinite;
+  animation-delay: 16s;
+}
+#slide6 {
+  animation: slide 20s ease infinite;
+  animation-delay: 20s;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+body {
+	background-color: #eaedf2;
+	margin: 0;
+	font-family: vernada;
+	overflow-x: hidden;
+}
+
+#ourlogo {
+  width:250px;
+  position: absolute;
+  top: 200%;
+  left: 20%;
+  z-index:100;
+}
+#ourtitle{
+  position: absolute;
+  top:52px;
+  left:8.5%;
+  width:82%;
+  height:100px;
+  z-index:100;
+}
+
+@media screen and (max-width: 815px) {
+  #leftcolumn {width: 100%;padding: 20px 20px 0px 20px;
+  }
+  #rightcolumn {width: 100%;padding: 20px 20px 0px 20px;}
+}
+
+.column:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.column {
+  color: black;
+  font-size: 16px;
+  line-height: 3em;
+  margin-left: 20px;
+  z-index: 1;
+  position: relative;
+}
+
+.column h2, .welcome h1 {
+  line-height: 1.5em;
+}
+
+#leftcolumn {
+  width: 53%;
+  height: 1000px;
+  float: left;
+  position: ;
+  padding: 0 3.5%;
+  background-color: white
+}
+
+#midcolumn {
+  width: 28%;
+  height: 100%;
+  float: left;
+  position: relative;
+  left:3%;
+  padding: 0 3.5%;
+  background-color: white
+}
+
+</STYLE>
+<HEAD>
+
+<BODY>
+
+<IMG src="images/mainlogo.png" id=ourlogo>
+</IMG>
+<IMG src="images/titleword.png" id=ourtitle>
+</IMG> 
+
+
+<div class="header">
+			<div class="slideshow">
+
+			<div class="slides">
+		<img src="images/mathslide1.jpg" class="slide" id="slide6">
+		<img src="images/mathslide2.jpg" class="slide" id="slide5">
+		<img src="images/mathslide3.png" class="slide" id="slide4">
+        <img src="images/mathslide1.jpg" class="slide" id="slide3">
+        <img src="images/mathslide2.jpg" class="slide" id="slide2">
+        <img src="images/mathslide3.png" class="slide" id="slide1">
+
+			</div>
+
+		</div>
+</div>
+
+<div id="navbar" name="navbar">
+      
+<a href="" id="red"> Home </a>
+
+<div class="dropdown d-orange">
+<button class="dropbtn orange"> testing web1 </button>
+<div class="content">
+<p>
+testing 123
+</p>
+<a href=""> 
+Go to [] 
+</a>
+</div>
+</div>
+
+<div class="dropdown d-yellow">
+<button class="dropbtn yellow"> testing web2 </button>
+<div class="content">
+<p>
+testing 123
+</p>
+<a href=""> 
+Go to [] 
+</a>
+</div>
+</div>
+
+<div class="dropdown d-green">
+<button class="dropbtn green"> Testing web3 </button>
+<div class="content">
+<p>
+testing 123
+</p>
+<a href=""> 
+Go to [] 
+</a>
+</div>
+</div>
+
+<DIV class="dropdown d-blue">
+<button class="dropbtn blue"> Testing web4 </button>
+<DIV class="content">
+<P>
+  Testing 123
+</P>
+<A href=""> 
+  Go to [] 
+  </A>
+  </DIV>
+</DIV>
+
+<A href="" id="indigo"> Testing web5 </A>
+
+<A href="" class="right" id="purple"> tesgting web 6 </A>
+
+<DIV id="border"></DIV>
+
+
+</DIV>
+
+<BR> </BR>
+<div class="column">
+<div id="leftcolumn">
+  <h2>Welcome to Our Website!</h2>
+<p>You would learn more about math and logic by playing riddles and puzzles about it. If you hate math or just somehow think using logic is tiring, this is the website for you! By reading this website, you might be able to be more interested in math if you’re not already into it and you might even get better in logic when solving the puzzles!</p>
+
+<TABLE align=center>
+<IMG src="images/mathlogicslide1.jpeg" width=100% height=350px name="square"> </IMG>
+</TABLE>
+<TABLE align=center> 
+	<TR> 
+		<TD> <IMG src="images/active.png" width=30 name='button1' 
+			onclick="src='images/active.png';
+			square.src='images/mathlogicslide1.jpeg'
+
+			button2.src='images/inactive.png';
+			button3.src='images/inactive.png';
+			button4.src='images/inactive.png';
+			button5.src='images/inactive.png';"> </IMG> 
+		</TD>
+		<TD> <IMG src="images/inactive.png" width=30 name='button2' 
+			onclick="src='images/active.png';
+			square.src='images/mathlogicslide2.jpeg'
+
+			button1.src='images/inactive.png';
+			button3.src='images/inactive.png';
+			button4.src='images/inactive.png';
+			button5.src='images/inactive.png';"> </IMG> </TD>
+		<TD> <IMG src="images/inactive.png" width=30 name='button3' 
+			onclick="src='images/active.png';
+			square.src='images/mathlogicslide3.jpg'
+
+			button2.src='images/inactive.png';
+			button1.src='images/inactive.png';
+			button4.src='images/inactive.png';
+			button5.src='images/inactive.png';"> </IMG> </TD>
+		<TD> <IMG src="images/inactive.png" width=30 name='button4' 
+			onclick="src='images/active.png';
+			square.src='images/mathlogicslide4.jpeg'
+
+			button2.src='images/inactive.png';
+			button3.src='images/inactive.png';
+			button1.src='images/inactive.png';
+			button5.src='images/inactive.png';"> </IMG> </TD>
+	</TR>
+</TABLE>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+<div id="midcolumn">
+  <h2>Table of contents</h2>
+<p>Introduction</p>
+</div>
+</div>
+
+
+    
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+testing
+
+
+
+
+
+<script>
+window.onscroll = function() {myFunction()};
+
+var header = document.getElementById("navbar");
+var sticky = header.offsetTop;
+
+function myFunction() {
+  if (window.pageYOffset > sticky) {
+    header.classList.add("sticky");
+  } else {
+    header.classList.remove("sticky");
+  }
+}
+</script>
+
+
+</BODY>
+</HTML>
