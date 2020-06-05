@@ -2,6 +2,7 @@
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style text="css/type">
+
 body {
   font-family: Arial, Helvetica, sans-serif;
   margin: 0;
@@ -10,9 +11,11 @@ body {
 
 hr {width: 100%;height: 6px;background-color:#0A3901;border: 0 none;}
 
+.topbar{width:100%;height:7px;background-color:#73ff6c;position:relative;z-index:1;}
+
 .column {
   float: left;
-  width: 25%;
+  width: 33.3%;
 }
 .column:hover {
   box-shadow:0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -21,12 +24,6 @@ hr {width: 100%;height: 6px;background-color:#0A3901;border: 0 none;}
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   margin: 8px;
   text-align: center;
-}
-.about-section {
-  padding: 50px;
-  text-align: center;
-  background-color: #339161;
-  color: white;
 }
 .container {
   padding: 0 16px;
@@ -59,59 +56,127 @@ hr {width: 100%;height: 6px;background-color:#0A3901;border: 0 none;}
     display: block;
   }
 }
-ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  background-color: #333;
-  position: -webkit-sticky;
-  position: sticky;
-  top: 0;
-}
-li {
-  float: left;
-}
-li a {
-  display: block;
+
+#navbar {background-color: ghostwhite;
+  width: 100%;z-index: 100;display: inline-block;
+  margin: 0;padding: 3px 0 0 0;}
+#navbar a {float: left;
+  font-size: 16px;color: lightslategrey;text-align: center;padding: 14px;text-decoration: none;
+  transition-duration: 0.4s;min-width: 100px;}
+#navbar a:nth-child(1) {margin-left: 2%;}
+.dropdown {float: left;overflow: hidden;z-index:100;}
+.dropdown .dropbtn {font-size: 16px;border: none;outline: none;color: lightslategrey;
+	padding: 14px;background-color: inherit;
+	font-family: inherit;margin: 0;transition-duration: 0.4s;min-width: 100px;}
+#navbar a:hover,.dropdown .dropbtn:hover, .dropdown .dropbtn:focus {
+font-size:16.5px; color: black; box-shadow:0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);}
+#navbar .content {display: none;position: absolute;background-color: ghostwhite;
+    min-width: 160px;max-width: 260px;box-shadow: 0px 4px 4px 0px rgba(0,0,0,0.2);z-index: 10;}
+#navbar .content a {float: none;color: mintcream;
+    padding: 16px;text-decoration: none;
+    display: block;text-align: left;transition-duration: 0s;margin-left: 0;
+    background-color: #18ccef;}
+#navbar .content p {float: none;color: steelblue;
+    padding: 16px 16px 8px 16px;text-decoration: none;display: block;text-align: left;
+    transition-duration: 0s;margin-left: 0;line-height: 1.7em;}
+#navbar .content a:hover, #navbar .content a:focus {opacity: 0.8;}
+#navbar .dropdown:hover .content,#navbar .dropdown:focus .content {display: block;}
+#navbar .right {float: right;margin-right: 2%;}
+.sticky {position: fixed;top: 0;width: 100%;}
+.sticky ~ .b-content {padding-top: 50px;}
+
+.slideshow {width: 100%;text-align: center;
+	overflow: hidden;margin: 0;position: relative;}
+.slides {display: flex;height: 210px;overflow: hidden;position: relative;}
+.slides img {width: 100%;position: absolute;}
+@keyframes slide{0% {right: 100%;}10%{right: 0;}20% {right: 0;}30% {right: -100%;}100% {right: -100%;}}
+#slide1 {animation: slide 20s ease infinite;}
+#slide2 {animation: slide 20s ease infinite;animation-delay: 4s;}
+#slide3 {animation: slide 20s ease infinite;animation-delay: 8s;}
+#slide4 {animation: slide 20s ease infinite;animation-delay: 12s;}
+#slide5 {animation: slide 20s ease infinite;animation-delay: 16s}
+#slide6 {animation: slide 20s ease infinite;animation-delay: 20s;}
+
+h1 {
+  position: relative;
+  width:48%;
+  left:25.5%;
+  padding: 1em 0.5em;
+  background: -webkit-linear-gradient(to right, rgb(255, 124, 111), #736cff);
+  background: linear-gradient(to right, rgb(255, 124, 111), #736cff);
   color: white;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
+  font-weight: lighter;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.56);
 }
-li a:hover {
-  background-color: #111;
+h2 {
+  position: relative;
+  left:26%;
+  padding: 0.35em 0.5em;
+  background: #b6e9ff;
+  color: #393939;
+  width:43%;
 }
-.active {
-  background-color: #4CAF50;
+h2:before {
+  content: " ";
+  position: absolute;
+  top: -16px;
+  left: 0;
+  width: -webkit-calc(100% - 16px);
+  width: calc(100% - 16px);
+  height: 0;
+  border: solid 8px transparent;
+  border-bottom-color: #b2ddf0;
 }
+#ourtitle{position: absolute;top:45px;left:17.5%;width:65%;height:125px;z-index:100;
+	box-shadow:0 5px 9px 0 rgba(0, 0, 0, 0.7), 0 7px 21px 0 rgba(0, 0, 0, 0.3);}
+
 </style>
 </head>
 <body bgcolor=#f7f9f>
 
+<div class=topbar> </div>
+<IMG src="images/titleww.png" id=ourtitle></IMG> 
 
-<ul>
-  <li><a href="#mainpage">Home</a></li>
-  <li><a href="#mathriddles">Math Riddles</a></li>
-  <li><a href="#logicpuzzles">Logic Puzzles</a></li>
-  <li><a class="active" href="aboutus.html">About Us</a></li>
-</ul>
+<div class="header"> <div class="slideshow"> <div class="slides">
+<img src="images/mathslide1.jpg" class="slide" id="slide6">
+<img src="images/mathslide2.jpg" class="slide" id="slide5">
+<img src="images/mathslide3.png" class="slide" id="slide4">
+<img src="images/mathslide1.jpg" class="slide" id="slide3">
+<img src="images/mathslide2.jpg" class="slide" id="slide2">
+<img src="images/mathslide3.png" class="slide" id="slide1">
+</div> </div> </div>
+<div class=topbar> </div>
 
-<div class="about-section">
-  <h1>About Us</h1>
-  <p>The Creators of This Website</p>
-</div>
-<hr></hr>
-<h2 style="text-align:center">Our 3 Members</h2>
+
+
+<div id="navbar" name="navbar">
+<a href="https://riddlesandquizes.github.io/"> Home </a> <div class="dropdown">
+<button class="dropbtn"> Math Riddles </button> <div class="content"> 
+<p> <a href="https://riddlesandquizes.github.io/"> Visit </a> </p> 
+</div></div>
+<div class="dropdown"> 
+<button class="dropbtn"> Logic Puzzles </button> <div class="content">
+<p> <a href="https://riddlesandquizes.github.io/"> Visit </a> </p> 
+</div></div>
+<A href="aboutus.html" class="right"> About Us </A>
+</div></div>
+
+
+
+
+
+<h1 align=center>Our 3 Members</h1>
+
+
 <div class="row">
   <div class="column">
     <div class="card">
-      <img src="images/ourboss.jpeg" alt="ourboss" style="width:100%">
+      <img src="images/ourboss.jpeg" alt="ourboss" style="width:100%;height:325px">
       <div class="container">
         <h2>Our Boss</h2>
         <p class="title">CEO & Founder</p>
         <p>Strong and smart. </p>
-        <p>superstrongturtle@joshua.eden</p>
+        <p>superstrongturtle@whole.nations</p>
         <p><button class="button"> <a href=""> </a> Contact</button></p>
       </div>
     </div>
@@ -119,7 +184,7 @@ li a:hover {
 
   <div class="column">
     <div class="card">
-      <img src="images/joshua.png" alt="joshua" style="width:100%">
+      <img src="images/joshua.png" alt="joshua" style="width:100%;height:325px">
       <div class="container">
         <h2>Joshua Wang</h2>
         <p class="title">Cooking-CEO</p>
@@ -134,7 +199,7 @@ li a:hover {
 
   <div class="column">
     <div class="card">
-      <img src="images/eden.png" alt="eden" style="width:100%">
+      <img src="images/eden.png" alt="eden" style="width:100%;height:325px">
       <div class="container">
         <h2>Eden Sun</h2>
         <p class="title">Worker</p>
@@ -145,6 +210,24 @@ li a:hover {
     </div>
   </div>
 </div>
+
+
+
+
+<script>
+window.onscroll = function() {myFunction()};
+
+var header = document.getElementById("navbar");
+var sticky = header.offsetTop;
+
+function myFunction() {
+  if (window.pageYOffset > sticky) {
+    header.classList.add("sticky");
+  } else {
+    header.classList.remove("sticky");
+  }
+}
+</script>
 
 </body>
 </html>
