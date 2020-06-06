@@ -1,39 +1,25 @@
 <html>
 <head>
-	<title> joshua and eden's summative website </title>
+	<title> Be Intellectual Like Turtle</title>
 <STYLE text="css/type">
 html {scroll-behavior: smooth;}
-body {background-color: #eaedf2;margin: 0;font-family: helvitaheue;overflow-x: hidden;}
+body {background-color: #eaedf2;margin: 0;font-family: helvetica neue;overflow-x: hidden;}
 .normal{font-size:18px;line-height:2.3;}
-ul {
-  padding: 0;
-}
+ul {padding: 0;}
 ul li{color: #404040;border-left: solid 6px #1fa67a;
   border-bottom: solid 2px #dadada;background: whitesmoke;
   margin-bottom: 5px;line-height: 1.5;padding: 0.5em;
-  list-style-type: none!important;font-weight: bold;
-}
-ul {
-  padding: 0;
-}
-ul li:hover{
-	box-shadow:0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-}
-ol {
-  background: #fffde8;
-  box-shadow: 0px 0px 0px 10px #fffde8;
-  border: dashed 2px #ffb03f;
-  border-radius: 9px;
-  margin-left: 10px;
-  margin-right: 10px;
-  padding: 0.5em 0.5em 0.5em 2em;
-}
-ol li {
-  line-height: 1.5;
-  padding: 0.5em 0;
-}
+  list-style-type: none!important;font-weight: bold;}
+ul li:hover{box-shadow:0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);}
+ol {background: #fffde8;box-shadow: 0px 0px 0px 10px #fffde8;
+	border: dashed 2px #ffb03f;border-radius: 9px;margin-left: 10px;margin-right: 10px;
+	padding: 0.5em 0.5em 0.5em 2em;}
+ol li {line-height: 1.5;padding: 0.5em 0;}
 
-
+.toppic{position:absolute;}
+#top1{}
+#top2{}
+#top3{}
 
 #navbar {background-color: ghostwhite;
   width: 100%;z-index: 100;display: inline-block;
@@ -43,11 +29,11 @@ ol li {
   transition-duration: 0.4s;min-width: 100px;}
 #navbar a:nth-child(1) {margin-left: 2%;}
 .dropdown {float: left;overflow: hidden;z-index:100;}
-.dropdown .dropbtn {font-size: 16px;border: none;outline: none;color: lightslategrey;
+.dropdown .dropbtn {font-size: 18px;border: none;outline: none;color: lightslategrey;
 	padding: 14px;background-color: inherit;
 	font-family: inherit;margin: 0;transition-duration: 0.4s;min-width: 100px;}
 #navbar a:hover,.dropdown .dropbtn:hover, .dropdown .dropbtn:focus {
-font-size:16.5px; color: black; box-shadow:0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);}
+font-size:19px; color: black; box-shadow:0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);}
 #navbar .content {display: none;position: absolute;background-color: ghostwhite;
     min-width: 160px;max-width: 260px;box-shadow: 0px 4px 4px 0px rgba(0,0,0,0.2);z-index: 10;}
 #navbar .content a {float: none;color: mintcream;
@@ -74,45 +60,73 @@ font-size:16.5px; color: black; box-shadow:0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px
 #slide4 {animation: slide 20s ease infinite;animation-delay: 12s;}
 #slide5 {animation: slide 20s ease infinite;animation-delay: 16s}
 #slide6 {animation: slide 20s ease infinite;animation-delay: 20s;}
+
+.mlslideshow {width: 100%;text-align: center;
+	overflow: hidden;margin: 0;position: relative;}
+.mlslides {display: flex;height: 400px;overflow: hidden;position: relative;}
+.mlslides img {width: 100%;height:400px;position: absolute;}
+@keyframes slide{0% {right: 100%;}10%{right: 0;}20% {right: 0;}30% {right: -100%;}100% {right: -100%;}}
+#mlslide1 {animation: slide 28s ease infinite;}
+#mlslide2 {animation: slide 28s ease infinite;animation-delay: 4s;}
+#mlslide3 {animation: slide 28s ease infinite;animation-delay: 8s;}
+#mlslide4 {animation: slide 28s ease infinite;animation-delay: 12s;}
+#mlslide5 {animation: slide 28s ease infinite;animation-delay: 16s;}
+#mlslide6 {animation: slide 28s ease infinite;animation-delay: 20s;}
+#mlslide7 {animation: slide 28s ease infinite;animation-delay: 24s;}
+#mlslide8 {animation: slide 28s ease infinite;animation-delay: 28s;}
 #mathlogicslideshow{border:solid yellowgreen 5px;}
+
+@media screen and (max-width: 815px) {
+#leftcontents {width: 100%;padding: 20px 20px 0px 20px;}
+#rightcontents {width: 100%;padding: 20px 20px 0px 20px;}}
+.contents:after {content: "";display: table;clear: both;}
+.contents {color: black;font-size: 16px;line-height: 3em;margin-left: 20px;z-index: -1;position: fixed;}
+.contents h2 {font-family: helvetica neue;line-height: 1.5em;}
+#leftcontents {width: 58%;height: 100%;float: left;position: fixed;
+	padding: 0 3.5%;background-color: white;}
+
+#leftcover {position:absolute;width:68.9%;height:18px;background-color:#eaedf2;}
 
 @media screen and (max-width: 815px) {
 #leftcolumn {width: 100%;padding: 20px 20px 0px 20px;}
 #rightcolumn {width: 100%;padding: 20px 20px 0px 20px;}}
 .column:after {content: "";display: table;clear: both;}
 .column {color: black;font-size: 16px;line-height: 3em;margin-left: 20px;z-index: 1;position: relative;}
-.column h2, .welcome h1 {font-family: roboto;line-height: 1.5em;}
-#leftcolumn {width: 59%;height: 700%;float: left;position: relative;
-	padding: 0 3.5%;background-color: white;}
+.column h2 {font-family: helvetica neue;line-height: 1.5em;}
+#leftcolumn {width: 59%;height: 0px;float: left;position: relative;
+	padding: 0 3.5%;background-color: white;opacity:1;}
 #midcolumn {width: 22%;height: 80%;float: left;position: fixed;left:69.5%;
 	padding: 0 3.5%;background-color: white;}
 
 #ourboss{position:fixed;top:4%;left:69.5%;width:28.7%;height:237px;z-index:-2;border:solid black 1.5px;}
 #filturt{position:absolute;top:0%;width:100%;height:100%;z-index:2;background-color:black;opacity:0;}
-#bossword{position:fixed;top:150px;left:69.5%;width:26.5%;
-	background-color:white;z-index:-1;border:solid black 1.5px;opacity:0;}
+.bossword {position:fixed;top:150px;left:69.5%;display: inline-block;margin: 1.5em 0;
+  padding: 7px 10px;min-width: 120px;max-width: 80%;color: black;font-size: 16px;
+  background: white;border: solid 1.5px black;box-sizing: border-box;opacity:0;z-index:-1;
+  border-radius: 10px / 10px;}
+.bossword:before {content: "";position: absolute;top: -24px;left: 50%;margin-left: -15px;
+  border: 12px solid transparent;border-bottom: 12px solid #FFF;z-index: 2;}
+.bossword:after {content: "";position: absolute;top: -30px;left: 50%;
+  margin-left: -17px;border: 14px solid transparent;border-bottom: 14px solid black;z-index: 1;}
+.bossword p {margin: 0;padding: 0;}
+
+#bossword0{position:fixed;top:150px;left:69.5%;z-index:-1;opacity:0;}
 #filturt1{position:absolute;top:100%;width:100%;height:30%;z-index:2;background-color:black;opacity:0;}
-#bossword1{position:fixed;top:150px;left:69.5%;width:26.5%;
-	background-color:white;z-index:-1;border:solid black 1.5px;opacity:0;}
+#bossword1{position:fixed;top:150px;left:69.5%;z-index:-1;opacity:0;}
+
 #filturt2{position:absolute;top:130%;width:100%;height:10%;z-index:2;background-color:black;opacity:0;}
-#bossword2{position:fixed;top:150px;left:69.5%;width:26.5%;
-	background-color:white;z-index:-1;border:solid black 1.5px;opacity:0;ling-height:0.5;}
+#bossword2{position:fixed;top:150px;left:69.5%;z-index:-1;opacity:0;}
+
 #filturt3{position:absolute;top:200%;width:100%;height:10%;z-index:2;background-color:black;opacity:0;}
-#bossword3{position:fixed;top:150px;left:69.5%;width:26.5%;
-	background-color:white;z-index:-1;border:solid black 1.5px;opacity:0;ling-height:0.5;}
+#bossword3{position:fixed;top:150px;left:69.5%;z-index:-1;opacity:0;}
+
 #filturt4{position:absolute;top:300%;width:100%;height:30%;z-index:2;background-color:black;opacity:0;}
-#bossword4{position:fixed;top:150px;left:69.5%;width:26.5%;
-	background-color:white;z-index:-1;border:solid black 1.5px;opacity:0;ling-height:0.5;}
-#bossword5{position:fixed;top:150px;left:69.5%;width:26.5%;
-	background-color:white;z-index:-1;border:solid black 1.5px;opacity:0;ling-height:0.5;}
-#bossword6{position:fixed;top:150px;left:69.5%;width:26.5%;
-	background-color:white;z-index:-1;border:solid black 1.5px;opacity:0;ling-height:0.5;}
-#bossword7{position:fixed;top:150px;left:69.5%;width:26.5%;
-	background-color:white;z-index:-1;border:solid black 1.5px;opacity:0;ling-height:0.5;}
-#bossword8{position:fixed;top:150px;left:69.5%;width:26.5%;
-	background-color:white;z-index:-1;border:solid black 1.5px;opacity:0;ling-height:0.5;}
-#bossword9{position:fixed;top:150px;left:69.5%;width:26.5%;
-	background-color:white;z-index:-1;border:solid black 1.5px;opacity:0;ling-height:0.5;}
+#bossword4{position:fixed;top:150px;left:69.5%;z-index:-1;opacity:0;}
+#bossword5{position:fixed;top:150px;left:69.5%;z-index:-1;opacity:0;}
+#bossword6{position:fixed;top:150px;left:69.5%;z-index:-1;opacity:0;}
+#bossword7{position:fixed;top:150px;left:69.5%;z-index:-1;opacity:0;}
+#bossword8{position:fixed;top:150px;left:69.5%;z-index:-1;opacity:0;}
+#bossword9{position:fixed;top:150px;left:69.5%;z-index:-1;opacity:0;}
 
 #ourtitle{position: absolute;top:52px;left:8.5%;width:82%;height:100px;z-index:100;
 	box-shadow:0 5px 9px 0 rgba(0, 0, 0, 0.7), 0 7px 21px 0 rgba(0, 0, 0, 0.3);}
@@ -122,7 +136,7 @@ font-size:16.5px; color: black; box-shadow:0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px
 border-radius: 100px / 50px}
 .bluebar{width:101%;height:4.5px;background-color:#18ccef;position:relative;z-index:1;
 border-radius: 100px / 50px}
-.spaceword{font-size:0.1px;color: white;line-height: 1}
+.spaceword{font-size:3px;color: white;line-height: 1}
 .question{width:98.5%;height:84.5px;position:relative;background-color:green;
 	color:white;font-size:18px;border-radius: 10px / 1px;text-shadow: 1px 1px 3px #000000}
 
@@ -159,31 +173,34 @@ border-radius: 100px / 50px}
 </STYLE>
 <HEAD>
 
-<BODY>
+<BODY link="#5C56D3" vlink="#5C56D3">
+
+<div class="contents"> <div id="leftcontents"> </div> </div>
+
 <img src="images/ourboss.jpeg" id=ourboss>  </img>
 <div id=filturt onmouseover="
-document.getElementById('bossword').style.opacity='1';
+document.getElementById('bossword0').style.opacity='1';
 document.getElementById('filturt').style.zIndex='-4';"> </div>
-<div id=bossword style="padding-left:20px;padding-top:2px;"> 
+<div id=bossword0 class=bossword style="padding-left:20px;padding-top:2px;"> 
 <h2> Oh hi </h2> </div>
 <div id=filturt1 onmouseover="
-document.getElementById('bossword').style.opacity='0';
+document.getElementById('bossword0').style.opacity='0';
 document.getElementById('bossword1').style.opacity='1';
 document.getElementById('filturt').style.zIndex='-4';
 document.getElementById('filturt1').style.zIndex='-4';"> </div>
-<div id=bossword1 style="padding-left:20px;padding-top:2px;" z-index=20> 
+<div id=bossword1 class=bossword style="padding-left:20px;padding-top:2px;" z-index=20> 
 <h2> Oh hi, I am the boss </h2> </div>
 <div id=filturt2 onmouseover="
-document.getElementById('bossword').style.opacity='0';
+document.getElementById('bossword0').style.opacity='0';
 document.getElementById('bossword1').style.opacity='0';
 document.getElementById('bossword2').style.opacity='1';
 document.getElementById('filturt').style.zIndex='-4';
 document.getElementById('filturt1').style.zIndex='-4';
 document.getElementById('filturt2').style.zIndex='-4';"> </div>
-<div id=bossword2 style="padding-left:20px;padding-top:2px;" z-index=20> 
+<div id=bossword2 class=bossword style="padding-left:20px;padding-top:2px;" z-index=20> 
 Let me just look at you with how you are using this website </div>
 <div id=filturt3 onmouseover="
-document.getElementById('bossword').style.opacity='0';
+document.getElementById('bossword0').style.opacity='0';
 document.getElementById('bossword1').style.opacity='0';
 document.getElementById('bossword2').style.opacity='0';
 document.getElementById('bossword3').style.opacity='1';
@@ -191,10 +208,10 @@ document.getElementById('filturt').style.zIndex='-4';
 document.getElementById('filturt1').style.zIndex='-4';
 document.getElementById('filturt2').style.zIndex='-4';
 document.getElementById('filturt3').style.zIndex='-4';"> </div>
-<div id=bossword3 style="padding-left:20px;padding-top:2px;" z-index=20> 
+<div id=bossword3 class=bossword style="padding-left:20px;padding-top:2px;" z-index=20> 
 Oh so basically just try to solve the question that my workers have made, it is kind of hard </div> 
 <div id=filturt4 onmouseover="
-document.getElementById('bossword').style.opacity='0';
+document.getElementById('bossword0').style.opacity='0';
 document.getElementById('bossword1').style.opacity='0';
 document.getElementById('bossword2').style.opacity='0';
 document.getElementById('bossword3').style.opacity='0';
@@ -204,20 +221,19 @@ document.getElementById('filturt1').style.zIndex='-4';
 document.getElementById('filturt2').style.zIndex='-4';
 document.getElementById('filturt3').style.zIndex='-4';
 document.getElementById('filturt4').style.zIndex='-4';"> </div>
-<div id=bossword4 style="padding-left:20px;padding-top:2px;" z-index=20> 
+<div id=bossword4 class=bossword style="padding-left:20px;padding-top:2px;" z-index=20> 
 Think about the answer, use the hint if needed </div> 
-<div id=bossword5 style="padding-left:20px;padding-top:2px;" z-index=20> 
+<div id=bossword5 class=bossword style="padding-left:20px;padding-top:2px;" z-index=20> 
 You only have one chance to answer (unless if you reload the page, but I know you won't do that) </div> 
-<div id=bossword6 style="padding-left:20px;padding-top:2px;" z-index=20> 
+<div id=bossword6 class=bossword style="padding-left:20px;padding-top:2px;" z-index=20> 
 Nice thinking, but you are wrong. My recommandation for you is to go try easy riddles/puzzles!</div> 
-<div id=bossword7 style="padding-left:20px;padding-top:2px;" z-index=20> 
+<div id=bossword7 class=bossword style="padding-left:20px;padding-top:2px;" z-index=20> 
 Wow, you must be smart like someone named Joshua! You should try challenging riddles/puzzles!</div>
-<div id=bossword8 style="padding-left:20px;padding-top:2px;" z-index=20> 
+<div id=bossword8 class=bossword style="padding-left:20px;padding-top:2px;" z-index=20> 
 Um, my recommandation for you is to go to "About Us".</div>
-<div id=bossword9 style="padding-left:20px;padding-top:2px;" z-index=20> 
-Sorry to inform you that we did not have enough time... wait for the updates! (although we might not likely work on updates) </div>
-
-
+<div id=bossword9 class=bossword style="padding-left:20px;padding-top:2px;" z-index=20> 
+Next updates for more riddles/puzzles would be... <strong> <u> somewhere around June.</u> </strong>
+Email us by "contact us" on "about us" section to encourage the worker to update quickly</div>
 
 
 <div class=topbar> </div>
@@ -231,19 +247,49 @@ Sorry to inform you that we did not have enough time... wait for the updates! (a
 <img src="images/mathslide2.jpg" class="slide" id="slide2">
 <img src="images/mathslide3.png" class="slide" id="slide1">
 </div> </div> </div>
-<div class=topbar> </div>
 
+<div class=topbar> </div>
 <div id="navbar" name="navbar">
-<a href="https://riddlesandquizes.github.io/"> Home </a> <div class="dropdown">
-<button class="dropbtn"> Math Riddles </button> <div class="content"> 
+	<img src="images/homeicon.png" width=50px height=50px class=toppic id=top1> </img>
+<a href="https://riddlesandquizes.github.io/"
+onmouseover="
+document.getElementById('top1').style.width='51px';
+document.getElementById('top1').style.height='51px';"
+onmouseout="
+document.getElementById('top1').style.width='50px';
+document.getElementById('top1').style.height='50px';"> 
+iiiii Home </a> <div class="dropdown">
+
+	<img src="images/mathriddle.png" width=50px height=50px class=toppic id=top2> </img>
+<button class="dropbtn" 
+onmouseover="
+document.getElementById('top2').style.width='51px';
+document.getElementById('top2').style.height='51px';"
+onmouseout="
+document.getElementById('top2').style.width='50px';
+document.getElementById('top2').style.height='50px';"> 
+aaai Math Riddles </button> <div class="content"> 
 <p> <a href="https://riddlesandquizes.github.io/"> Visit </a> </p> 
 </div></div>
+
 <div class="dropdown"> 
-<button class="dropbtn"> Logic Puzzles </button> <div class="content">
+	<img src="images/logicpuzzle.png" width=50px height=50px class=toppic id=top3> </img>
+<button class="dropbtn"
+onmouseover="
+document.getElementById('top3').style.width='51px';
+document.getElementById('top3').style.height='51px';"
+onmouseout="
+document.getElementById('top3').style.width='50px';
+document.getElementById('top3').style.height='50px';"> > 
+aa Logic Puzzles </button> <div class="content">
 <p> <a href="https://riddlesandquizes.github.io/"> Visit </a> </p> 
 </div></div>
-<A href="aboutus.html" class="right"> About Us </A>
+
+<A href="aboutus.html" class="right"> 
+About Us </A>
 </div></div>
+
+<div id="leftcover"> </div> 
 
 <BR> </BR>
 
@@ -257,28 +303,20 @@ Would you like to try some <u> puzzles</u> and <u> riddles</u>? </p>
 If you are not interested in mathematics or just somehow think using logic is tiring, here is the website for you! By visiting this website, you will be interested in mathematics and logical thinkings.</p>
 <p class=spaceword> haha i am space </p>
 
-<IMG src="images/ridpud1.png" width=100% height=350px name="square" id=mathlogicslideshow> </IMG>
-<TABLE align=center> 
-	<TR> 
-<TD> <IMG src="images/active1.png" width=50 name='button1' onmouseover="src='images/active1.png';
-	square.src='images/ridpud1.png'
-button2.src='images/inactive2.png';button3.src='images/inactive2.png';button4.src='images/inactive2.png';
-button5.src='images/inactive2.png';"> </IMG> 
-</TD>
-<TD> <IMG src="images/inactive2.png" width=50 name='button2' onmouseover="src='images/active1.png';
-	square.src='images/ridpud2.png'
-button1.src='images/inactive2.png';button3.src='images/inactive2.png';button4.src='images/inactive2.png';
-button5.src='images/inactive2.png';"> </IMG> </TD>
-<TD> <IMG src="images/inactive2.png" width=50 name='button3' onmouseover="src='images/active1.png';
-	square.src='images/ridpud3.png'
-button2.src='images/inactive2.png';button1.src='images/inactive2.png';button4.src='images/inactive2.png';
-button5.src='images/inactive2.png';"> </IMG> </TD>
-<TD> <IMG src="images/inactive2.png" width=50 name='button4' onmouseover="src='images/active1.png';
-	square.src='images/ridpud4.png'
-button2.src='images/inactive2.png';button3.src='images/inactive2.png';button1.src='images/inactive2.png';
-button5.src='images/inactive2.png';"> </IMG> </TD>
-	</TR>
-</TABLE>
+<div id=mathlogicslideshow>
+<div class="mlslideshow"> <div class="mlslides">
+<IMG src="images/ridpud1.jpg"  name="square1" id="mlslide8"> </IMG>
+<IMG src="images/ridpud2.jpg"  name="square2" id="mlslide7"> </IMG>
+<IMG src="images/ridpud3.jpg"  name="square3" id="mlslide6"> </IMG>
+<IMG src="images/ridpud4.jpg"  name="square4" id="mlslide5"> </IMG>
+<IMG src="images/ridpud1.jpg"  name="square1" id="mlslide4"> </IMG>
+<IMG src="images/ridpud2.jpg"  name="square2" id="mlslide3"> </IMG>
+<IMG src="images/ridpud3.jpg"  name="square3" id="mlslide2"> </IMG>
+<IMG src="images/ridpud4.jpg"  name="square4" id="mlslide1"> </IMG>
+
+</div> </div> 
+</div>
+
 <p class=spaceword> haha i am space </p>
 <p class=spaceword> haha i am space </p>
 <p class=spaceword> haha i am space </p>
@@ -288,7 +326,7 @@ button5.src='images/inactive2.png';"> </IMG> </TD>
 <div class=bluebar> </div>
 <p class=spaceword> haha i am space </p> 
 
-<p class="normal"> In order to understand what Math Riddle and are, let's try them! </p>
+<p class="normal"> In order to understand what Math Riddle and are, let's try it! </p>
 <p class=spaceword> haha i am space </p> 
 
 <div class="question" style="padding-left:20px;padding-top:2px;"> 
@@ -313,14 +351,14 @@ Organize Your Thoughts (click me)
 </div>
 <div id=thinking1> 
 <p class="normal"> With the first race, </p>
-<p class="normal"> It concludes Michael running 100 meters = Jonathan running 90 meters </p>
+<p class="normal"> It concludes Michael running 50 meters = Jonathan running 40 meters </p>
 <p class="normal"> and of course, Michael runs faster than Jonathan does </p>
 <div class="think1" style="padding-left:20px;padding-top:2px;" 
 onclick="document.getElementById('hint1').style.opacity='1';"> 
 Need Hint? (click me)
 </div>
 <div id=hint1>
-<p class="normal"> Remember that they will run at the same speed </p>
+<p class="normal"> Which means when Michael runs 100 meters, Jonathan runs 80 meters </p>
 </div>
 </div>
 
@@ -330,7 +368,6 @@ Need Hint? (click me)
 <img src="images/exampleq.png" width=100%> </img>
 <p class="normal"> Click the answer you think is correct </p>
 
-
 <div id=filter1>
 </div>
 <div class="choice1" style="padding-left:20px;padding-top:2px;" 
@@ -338,12 +375,13 @@ onclick="document.getElementById('answer1').style.opacity='1';
 document.getElementById('answer2').style.opacity='0';
 document.getElementById('answer3').style.opacity='0';
 document.getElementById('filter1').style.zIndex='2';
-document.getElementById('bossword').style.opacity='0';
+document.getElementById('bossword0').style.opacity='0';
 document.getElementById('bossword5').style.opacity='0';
 document.getElementById('bossword6').style.opacity='1';
 document.getElementById('explain1').style.opacity='0';
 document.getElementById('explanation1').style.opacity='1';"
 onmouseover="
+document.getElementById('bossword0').style.opacity='0';
 document.getElementById('bossword1').style.opacity='0';
 document.getElementById('bossword2').style.opacity='0';
 document.getElementById('bossword3').style.opacity='0';
@@ -361,12 +399,13 @@ onclick="document.getElementById('answer2').style.opacity='1';
 document.getElementById('answer1').style.opacity='0';
 document.getElementById('answer3').style.opacity='0';
 document.getElementById('filter1').style.zIndex='2';
-document.getElementById('bossword').style.opacity='0';
+document.getElementById('bossword0').style.opacity='0';
 document.getElementById('bossword5').style.opacity='0';
 document.getElementById('bossword7').style.opacity='1';
 document.getElementById('explain1').style.opacity='0';
 document.getElementById('explanation2').style.opacity='1';"
 onmouseover="
+document.getElementById('bossword0').style.opacity='0';
 document.getElementById('bossword1').style.opacity='0';
 document.getElementById('bossword2').style.opacity='0';
 document.getElementById('bossword3').style.opacity='0';
@@ -384,12 +423,13 @@ onclick="document.getElementById('answer3').style.opacity='1';
 document.getElementById('answer1').style.opacity='0';
 document.getElementById('answer2').style.opacity='0';
 document.getElementById('filter1').style.zIndex='2';
-document.getElementById('bossword').style.opacity='0';
+document.getElementById('bossword0').style.opacity='0';
 document.getElementById('bossword5').style.opacity='0';
 document.getElementById('bossword8').style.opacity='1';
 document.getElementById('explain1').style.opacity='0';
 document.getElementById('explanation3').style.opacity='1';"
 onmouseover="
+document.getElementById('bossword0').style.opacity='0';
 document.getElementById('bossword1').style.opacity='0';
 document.getElementById('bossword2').style.opacity='0';
 document.getElementById('bossword3').style.opacity='0';
@@ -403,17 +443,14 @@ document.getElementById('filturt4').style.zIndex='-4';">
 Jonathan will win 
 </div>
 
-
 <p class="normal"> Your Answer is... </p>
 <div id=answer1 style="padding-left:20px;padding-top:2px;"> <h2> Wrong </h2> </div>
 <div id=answer2 style="padding-left:20px;padding-top:2px;"> <h2> Correct </h2> </div>
 <div id=answer3 style="padding-left:20px;padding-top:2px;"> <h2> Wrong </h2> </div>
 
-
-
 <br> </br>   
 <div class="greenbar"> </div>
-<h2 id="i3"> <span style="color:white;"> a </span> Explanation </h2>
+<h2> <span style="color:white;"> a </span> Explanation </h2>
 <p class=spaceword> haha i am space </p> 
 <div class="greenbar"> </div>
 <p class=spaceword> haha i am space </p> 
@@ -445,7 +482,7 @@ Jonathan will win
 
 <div class="greenbar"> </div>
 <h2 onmouseover="
-document.getElementById('bossword').style.opacity='0';
+document.getElementById('bossword0').style.opacity='0';
 document.getElementById('bossword1').style.opacity='0';
 document.getElementById('bossword2').style.opacity='0';
 document.getElementById('bossword3').style.opacity='0';
@@ -460,23 +497,19 @@ document.getElementById('filturt1').style.zIndex='-4';
 document.getElementById('filturt2').style.zIndex='-4';
 document.getElementById('filturt3').style.zIndex='-4';
 document.getElementById('filturt4').style.zIndex='-4';"> 
-<span style="color:white;"> a </span> New Contents </h2>
+<span style="color:white;"> a </span> Wait for updates... </h2>
 <div class="greenbar"> </div>
 <p class=spaceword> haha i am space </p> 
 <p class=normal> Wait for new updates, here are the things you can do now </p>
 <ol> 
-	<li> <p class=normal> Visit your recommandation </p> </li>
+	<li> <p class=normal> Visit your recommandation that turtle (our boss) gave you </p> </li>
 	<li> <p class=normal> Visit Math Riddles page </p> </li>
 	<li> <p class=normal> Visit Logic Puzzles page </p> </li>
 </ol>
+<p class=spaceword> haha i am space </p>
+<p class=spaceword> haha i am space </p>
 
 </div>
-
-
-
-
-
-
 
 <div id="midcolumn"> <p class=spaceword> haha i am space </p>
 
@@ -486,24 +519,21 @@ document.getElementById('filturt4').style.zIndex='-4';">
 <ul> 
 	<li> <a href="#i1"> Welcome </a> </li>
 	<li> <a href="#i2"> Question </a> </li>
-	<li> <a href="#i3"> Explanation </a> </li>
+	<li> <a href="aboutus.html"> About Us </a> </li>
+	<li> Wait for updates... </li>
 </ul>
-<img src="images/ourboss.jpeg" width=100%>  </img>
 <br> </br>
-<img src="images/ourboss.jpeg" width=100%>  </img>
 <br> </br>
-<img src="images/ourboss.jpeg" width=100%>  </img>
+<img src="images/afterpic1.png" width=100%>  </img>
 <br> </br>
-<img src="images/ourboss.jpeg" width=100%>  </img>
+<img src="images/afterpic2.png" width=100%>  </img>
 <br> </br>
-<img src="images/ourboss.jpeg" width=100%>  </img>
+<img src="images/afterpic3.png" width=100%>  </img>
+<br> </br>
+<img src="images/afterpic4.png" width=100%>  </img>
+
 </div>
 </div>
-
-
-    
-
-
 
 <script>
 window.onscroll = function() {myFunction()};
