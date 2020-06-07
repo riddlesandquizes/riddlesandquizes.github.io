@@ -100,9 +100,21 @@ h2 {color: black;
   vertical-align: middle;border-radius: 25px 0px 0px 25px;}
 h2:before {content: '●';color: white;margin-right: 8px;}
 
-
 #ourtitle{position: absolute;top:45px;left:17.5%;width:65%;height:125px;z-index:100;
 	box-shadow:0 5px 9px 0 rgba(0, 0, 0, 0.7), 0 7px 21px 0 rgba(0, 0, 0, 0.3);}
+
+.bossword {position:relative;display: inline-block;margin: 1.5em 0;
+  padding: 7px 10px;min-width: 120px;max-width: 80%;color: black;font-size: 16px;
+  background: white;border: solid 1.5px black;box-sizing: border-box;opacity:0;z-index:-1;
+  border-radius: 10px / 10px;}
+.bossword:before {content: "";position: absolute;top: -24px;left: 50%;margin-left: -15px;
+  border: 12px solid transparent;border-bottom: 12px solid #FFF;z-index: 2;}
+.bossword:after {content: "";position: absolute;top: -30px;left: 50%;
+  margin-left: -17px;border: 14px solid transparent;border-bottom: 14px solid black;z-index: 1;}
+.bossword p {margin: 0;padding: 0;}
+#bossword1{position:absolute;z-index:2;opacity:0;font-size:18px;}
+#bossword2{position:absolute;z-index:2;opacity:0;}
+
 </style>
 </head>
 <body>
@@ -168,37 +180,48 @@ aaai Logic Puzzles </button> <div class="content">
 <br> </br>
 
 <div class="row">
-	<div class="column"><div class="card">
-<img src="images/ourboss.jpeg" alt="ourboss" style="width:100%;height:325px">
+	<div class="column"> <div class="card">
+<img src="images/ourboss.jpeg" alt="ourboss" style="width:100%;height:325px"> </img>
 <div class="container">
+	<div id=bossword1 class=bossword style="padding-left:20px;padding-top:2px;"> 
+	Oh hi, can you speak the language that turtles use then? </div>
 <h2> Our Boss </h2>
 <p class="title"> CEO & Founder </p>
 <p> Strong, Smart, Nice, and Kind </p>
 <p class="normal"> iamstrong@turtle </p>
-<div class="button"> 
+<div class="button" onclick="
+document.getElementById('bossword1').style.opacity='1';
+document.getElementById('bossword2').style.opacity='0';"> 
 <h3> 
 	<span style="color:#2196F3;">aaaa</span>Contact<span style="color:#2196F3;">aaaa</span> 
 </h3>  </div> 
 <br> </br>
 </div></div></div>
 	<div class="column"><div class="card">
-<img src="images/joshua.png" alt="joshua" style="width:100%;height:325px"> <div class="container"><h2>Joshua Wang</h2>
+<img src="images/joshua.png" alt="joshua" style="width:100%;height:325px"> </img> 
+<div class="container"> 
+	<h2>Joshua Wang</h2>
 <p class="title"> Cooking-CEO </p>
 <p> My three stars michelin cooking show </p>
 <p class="normal"> joswan25@kas.tw </p>
-<a href="https://www.youtube.com/watch?v=BfwpLHR6UPI&t"> <div class="button"> 
+<div class="button"> <a href="https://www.youtube.com/watch?v=BfwpLHR6UPI&t"> 
 <h3> 
 	<span style="color:#2196F3;">aaaa</span>Contact<span style="color:#2196F3;">aaaa</span> 
-</h3>  </div> 
+</h3>  </a> </div> 
 <br> </br>
 </div></div></div>
 	<div class="column"> <div class="card">
-<img src="images/eden.png" alt="eden" style="width:100%;height:325px"> <div class="container">
-<h2> Eden Sun </h2>
+<img src="images/eden.png" alt="eden" style="width:100%;height:325px"> </img>
+<div class="container">
+	<div id=bossword2 class=bossword style="padding-left:20px;padding-top:2px;"> 
+	I think the update is coming on Monday </div> 
+	<h2> Eden Sun </h2>
 <p class="title"> Worker </p>
 <p> Ok </p>
 <p class="normal"> edesun25@kas.tw </p>
-<div class="button"> 
+<div class="button" onclick="
+document.getElementById('bossword1').style.opacity='0';
+document.getElementById('bossword2').style.opacity='1';"> 
 <h3> 
 	<span style="color:#2196F3;">aaaa</span>Contact<span style="color:#2196F3;">aaaa</span> 
 </h3>  </div> 
@@ -207,6 +230,8 @@ aaai Logic Puzzles </button> <div class="content">
 </div>
 
 <br> </br>
+
+
 
 </body>
 </html>
