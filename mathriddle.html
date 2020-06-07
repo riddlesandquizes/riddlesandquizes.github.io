@@ -1,0 +1,390 @@
+<html>
+<head>
+	<title> Be Intellectual Like Turtle</title>
+<STYLE text="css/type">
+html {scroll-behavior: smooth;}
+body {background-color: #eaedf2;margin: 0;font-family: helvetica neue;overflow-x: hidden;}
+.normal{font-size:18px;line-height:2.3;}
+ul {padding: 0;}
+ul li{color: #404040;border-left: solid 6px #1fa67a;
+  border-bottom: solid 2px #dadada;background: whitesmoke;
+  margin-bottom: 5px;line-height: 1.5;padding: 0.5em;
+  list-style-type: none!important;font-weight: bold;}
+ul li:hover{box-shadow:0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);}
+ol {background: #fffde8;box-shadow: 0px 0px 0px 10px #fffde8;
+	border: dashed 2px #ffb03f;border-radius: 9px;margin-left: 10px;margin-right: 10px;
+	padding: 0.5em 0.5em 0.5em 2em;}
+ol li {line-height: 1.5;padding: 0.5em 0;}
+
+.toppic{position:absolute;}
+#top1{}
+#top2{}
+#top3{}
+
+#navbar {background-color: ghostwhite;
+  width: 100%;z-index: 100;display: inline-block;
+  margin: 0;padding: 3px 0 0 0;}
+#navbar a {float: left;
+  font-size: 16px;color: lightslategrey;text-align: center;padding: 14px;text-decoration: none;
+  transition-duration: 0.4s;min-width: 100px;}
+#navbar a:nth-child(1) {margin-left: 2%;}
+.dropdown {float: left;overflow: hidden;z-index:100;}
+.dropdown .dropbtn {font-size: 18px;border: none;outline: none;color: lightslategrey;
+	padding: 14px;background-color: inherit;
+	font-family: inherit;margin: 0;transition-duration: 0.4s;min-width: 100px;}
+#navbar a:hover,.dropdown .dropbtn:hover, .dropdown .dropbtn:focus {
+font-size:19px; color: black; box-shadow:0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);}
+#navbar .content {display: none;position: absolute;background-color: ghostwhite;
+    min-width: 160px;max-width: 260px;box-shadow: 0px 4px 4px 0px rgba(0,0,0,0.2);z-index: 10;}
+#navbar .content a {float: none;color: mintcream;
+    padding: 16px;text-decoration: none;
+    display: block;text-align: left;transition-duration: 0s;margin-left: 0;
+    background-color: #18ccef;}
+#navbar .content p {float: none;color: steelblue;
+    padding: 16px 16px 8px 16px;text-decoration: none;display: block;text-align: left;
+    transition-duration: 0s;margin-left: 0;line-height: 1.7em;}
+#navbar .content a:hover, #navbar .content a:focus {opacity: 0.8;}
+#navbar .dropdown:hover .content,#navbar .dropdown:focus .content {display: block;}
+#navbar .right {float: right;margin-right: 2%;}
+.sticky {position: fixed;top: 0;width: 100%;}
+.sticky ~ .b-content {padding-top: 50px;}
+
+.slideshow {width: 100%;text-align: center;
+	overflow: hidden;margin: 0;position: relative;}
+.slides {display: flex;height: 210px;overflow: hidden;position: relative;}
+.slides img {width: 100%;position: absolute;}
+@keyframes slide{0% {right: 100%;}10%{right: 0;}20% {right: 0;}30% {right: -100%;}100% {right: -100%;}}
+#slide1 {animation: slide 20s ease infinite;}
+#slide2 {animation: slide 20s ease infinite;animation-delay: 4s;}
+#slide3 {animation: slide 20s ease infinite;animation-delay: 8s;}
+#slide4 {animation: slide 20s ease infinite;animation-delay: 12s;}
+#slide5 {animation: slide 20s ease infinite;animation-delay: 16s}
+#slide6 {animation: slide 20s ease infinite;animation-delay: 20s;}
+
+
+@media screen and (max-width: 815px) {
+#leftcontents {width: 100%;padding: 20px 20px 0px 20px;}
+#rightcontents {width: 100%;padding: 20px 20px 0px 20px;}}
+.contents:after {content: "";display: table;clear: both;}
+.contents {color: black;font-size: 16px;line-height: 3em;margin-left: 20px;z-index: -1;position: fixed;}
+.contents h2 {font-family: helvetica neue;line-height: 1.5em;}
+#leftcontents {width: 58%;height: 100%;float: left;position: fixed;
+	padding: 0 3.5%;background-color: white;}
+
+#leftcover {position:absolute;width:68.9%;height:18px;background-color:#eaedf2;}
+
+@media screen and (max-width: 815px) {
+#leftcolumn {width: 100%;padding: 20px 20px 0px 20px;}
+#rightcolumn {width: 100%;padding: 20px 20px 0px 20px;}}
+.column:after {content: "";display: table;clear: both;}
+.column {color: black;font-size: 16px;line-height: 3em;margin-left: 20px;z-index: 1;position: relative;}
+.column h2 {font-family: helvetica neue;line-height: 1.5em;}
+#leftcolumn {width: 59%;height: 0px;float: left;position: relative;
+	padding: 0 3.5%;background-color: white;opacity:1;}
+#midcolumn {width: 22%;height: 80%;float: left;position: fixed;left:69.5%;
+	padding: 0 3.5%;background-color: white;}
+
+#ourboss{position:fixed;top:4%;left:69.5%;width:28.7%;height:237px;z-index:-2;border:solid black 1.5px;}
+#filturt{position:absolute;top:0%;width:100%;height:100%;z-index:2;background-color:black;opacity:0;}
+.bossword {position:fixed;top:150px;left:69.5%;display: inline-block;margin: 1.5em 0;
+  padding: 7px 10px;min-width: 120px;max-width: 80%;color: black;font-size: 16px;
+  background: white;border: solid 1.5px black;box-sizing: border-box;opacity:0;z-index:-1;
+  border-radius: 10px / 10px;}
+.bossword:before {content: "";position: absolute;top: -24px;left: 50%;margin-left: -15px;
+  border: 12px solid transparent;border-bottom: 12px solid #FFF;z-index: 2;}
+.bossword:after {content: "";position: absolute;top: -30px;left: 50%;
+  margin-left: -17px;border: 14px solid transparent;border-bottom: 14px solid black;z-index: 1;}
+.bossword p {margin: 0;padding: 0;}
+
+#bossword0{position:fixed;top:150px;left:69.5%;z-index:-1;opacity:0;}
+
+#ourtitle{position: absolute;top:52px;left:8.5%;width:82%;height:100px;z-index:100;
+	box-shadow:0 5px 9px 0 rgba(0, 0, 0, 0.7), 0 7px 21px 0 rgba(0, 0, 0, 0.3);}
+
+.topbar{width:100%;height:7px;background-color:#18ccef;position:relative;z-index:1;}
+.greenbar{width:101%;height:4.5px;background-color:green;position:relative;z-index:1;
+border-radius: 100px / 50px}
+.bluebar{width:101%;height:4.5px;background-color:#778eff;position:relative;z-index:1;
+border-radius: 100px / 50px}
+.spaceword{font-size:3px;color: white;line-height: 1}
+.question{width:98.5%;height:84.5px;position:relative;background-color:green;
+	color:white;font-size:18px;border-radius: 10px / 1px;text-shadow: 1px 1px 3px #000000}
+
+.think1{width:97.5%;height:55px;position:relative; background-color: white;
+	color:gray;font-size:19px;border:solid gray 1px;cursor: pointer;}
+.think1:hover{color:black;border:solid black 1px;font-size:20px;
+	box-shadow:0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);}
+#thinking1{position:relative;opacity:0;}
+#hint1{position:relative;opacity:0;}
+
+.choice1{width:97.5%;height:55px;position:relative; background-color: #ee7474;
+	color:white;font-size:19px;border:solid gray 1px;cursor: pointer;}
+.choice1:hover{color:white;border:solid black 1px;font-size:20px;
+	box-shadow:0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);}
+.choice2{width:97.5%;height:55px;position:relative; background-color: #f9c170;
+	color:white;font-size:19px;border:solid gray 1px;cursor: pointer;}
+.choice2:hover{color:white;border:solid black 1px;font-size:20px;
+	box-shadow:0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);}
+.choice3{width:97.5%;height:55px;position:relative; background-color:#45a5ff;
+	color:white;font-size:19px;border:solid gray 1px;cursor: pointer;}
+.choice3:hover{color:white;border:solid black 1px;font-size:20px;
+	box-shadow:0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);}
+#answer1{width:58%;height:84.5px;position:absolute;background-color:#ec3030;
+	color:white;font-size:18px;border-radius: 10px / 1px;text-shadow: 1px 1px 3px #000000;opacity:0;}
+#answer2{width:58%;height:84.5px;position:absolute;background-color:green;
+	color:white;font-size:18px;border-radius: 10px / 1px;text-shadow: 1px 1px 3px #000000;opacity:0;}
+#answer3{width:58%;height:84.5px;position:absolute;background-color:#ec3030;
+	color:white;font-size:18px;border-radius: 10px / 1px;text-shadow: 1px 1px 3px #000000;opacity:0;}
+#filter1{position:absolute;width:100%;height:178px;z-index:-2;background-color:black;opacity:0;}
+#explain1{position:absolute;opacity:1;}
+#explanation1{position:absolute;opacity:0;}
+#explanation2{position:absolute;opacity:0;}
+#explanation3{position:relative;opacity:0;}
+</STYLE>
+<HEAD>
+
+<BODY link="#5C56D3" vlink="#5C56D3">
+
+<div class="contents"> <div id="leftcontents"> </div> </div>
+
+<img src="images/ourboss.jpeg" id=ourboss>  </img>
+<div id=filturt onmouseover="
+document.getElementById('bossword0').style.opacity='1';
+document.getElementById('filturt').style.zIndex='-4';"> </div>
+<div id=bossword0 class=bossword style="padding-left:20px;padding-top:2px;"> 
+<h2> Oh hi </h2> </div>
+
+<div class=topbar> </div>
+<IMG src="images/titleword.png" id=ourtitle></IMG> 
+
+<div class="header"> <div class="slideshow"> <div class="slides">
+<img src="images/mathslide1.jpg" class="slide" id="slide6">
+<img src="images/mathslide2.jpg" class="slide" id="slide5">
+<img src="images/mathslide3.png" class="slide" id="slide4">
+<img src="images/mathslide1.jpg" class="slide" id="slide3">
+<img src="images/mathslide2.jpg" class="slide" id="slide2">
+<img src="images/mathslide3.png" class="slide" id="slide1">
+</div> </div> </div>
+
+<div class=topbar> </div>
+<div id="navbar" name="navbar">
+	<img src="images/homeicon.png" width=50px height=50px class=toppic id=top1> </img>
+<a href="https://riddlesandquizes.github.io/"
+onmouseover="
+document.getElementById('top1').style.width='51px';
+document.getElementById('top1').style.height='51px';"
+onmouseout="
+document.getElementById('top1').style.width='50px';
+document.getElementById('top1').style.height='50px';"> 
+iiiii Home </a> <div class="dropdown">
+
+	<img src="images/mathriddle.png" width=50px height=50px class=toppic id=top2> </img>
+<button class="dropbtn" 
+onmouseover="
+document.getElementById('top2').style.width='51px';
+document.getElementById('top2').style.height='51px';"
+onmouseout="
+document.getElementById('top2').style.width='50px';
+document.getElementById('top2').style.height='50px';"> 
+aaai Math Riddles </button> <div class="content"> 
+<p> <a href="mathriddle.html"> Visit </a> </p> 
+</div></div>
+
+<div class="dropdown"> 
+	<img src="images/logicpuzzle.png" width=50px height=50px class=toppic id=top3> </img>
+<button class="dropbtn"
+onmouseover="
+document.getElementById('top3').style.width='51px';
+document.getElementById('top3').style.height='51px';"
+onmouseout="
+document.getElementById('top3').style.width='50px';
+document.getElementById('top3').style.height='50px';"> > 
+aa Logic Puzzles </button> <div class="content">
+<p> <a href="logicpuzzle.html"> Visit </a> </p> 
+</div></div>
+
+<A href="aboutus.html" class="right"> 
+About Us </A>
+</div></div>
+
+<div id="leftcover"> </div> 
+
+<BR> </BR>
+
+<div class="column"> <div id="leftcolumn"> <p class=spaceword> haha i am space </p>
+<div class=bluebar> </div>
+<h2 id="i1"> <span style="color:white"> a </span> Math Riddles!  </h2>
+<div class=bluebar> </div>
+<p class=normal> 
+Would you like to try some <u> puzzles</u> and <u> riddles</u>? </p>
+<p class=normal> 
+If you are not interested in mathematics or just somehow think using logic is tiring, here is the website for you! By visiting this website, you will be interested in mathematics and logical thinkings.</p>
+<p class=spaceword> haha i am space </p>
+
+
+<div class=bluebar> </div> 
+<h2> <span style="color:white"> a </span> What are Math Riddles and Logic Puzzles? </h2>
+<div class=bluebar> </div>
+<p class=spaceword> haha i am space </p> 
+
+<p class="normal"> In order to understand what Math Riddle and are, let's try it! </p>
+<p class=spaceword> haha i am space </p> 
+
+<div class="question" style="padding-left:20px;padding-top:2px;"> 
+<h2 id="i2">  Question </h2>
+</div>
+<img src="images/examapple.png" width=100%> </img>
+<p class="normal"> Michael and Jonathan were racing with 50 meters </p>
+<p class="normal"> Michael won the first time </p>
+<p class="normal"> When Michael ran up to 50 meters, Jonathan was running at 40 meters </p>
+<p class="normal"> For the second race, Michael step back 10 meters to start </p>
+<p class="normal"> Who won the second race? </p>
+
+<div class="greenbar"> </div>
+<h2> <span style="color:white;"> a </span> Let's Think </h2>
+<div class="greenbar"> </div>
+<p class=spaceword> haha i am space </p> 
+<p class=spaceword> haha i am space </p> 
+
+<div class="think1" style="padding-left:20px;padding-top:2px;" 
+onclick="document.getElementById('thinking1').style.opacity='1';"> 
+Organize Your Thoughts (click me) 
+</div>
+<div id=thinking1> 
+<p class="normal"> With the first race, </p>
+<p class="normal"> It concludes Michael running 50 meters = Jonathan running 40 meters </p>
+<p class="normal"> and of course, Michael runs faster than Jonathan does </p>
+<div class="think1" style="padding-left:20px;padding-top:2px;" 
+onclick="document.getElementById('hint1').style.opacity='1';"> 
+Need Hint? (click me)
+</div>
+<div id=hint1>
+<p class="normal"> Which means when Michael runs 100 meters, Jonathan runs 80 meters </p>
+</div>
+</div>
+
+<div class="question" style="padding-left:20px;padding-top:2px;"> 
+<h2>  Solve </h2>
+</div> 
+<img src="images/exampleq.png" width=100%> </img>
+<p class="normal"> Click the answer you think is correct </p>
+
+<div id=filter1>
+</div>
+<div class="choice1" style="padding-left:20px;padding-top:2px;" 
+onclick="document.getElementById('answer1').style.opacity='1';
+document.getElementById('answer2').style.opacity='0';
+document.getElementById('answer3').style.opacity='0';
+document.getElementById('filter1').style.zIndex='2';
+document.getElementById('bossword0').style.opacity='0';
+document.getElementById('bossword5').style.opacity='0';
+document.getElementById('bossword6').style.opacity='1';
+document.getElementById('explain1').style.opacity='0';
+document.getElementById('explanation1').style.opacity='1';"> 
+Race with result in tie 
+</div>  
+<div class="choice2" style="padding-left:20px;padding-top:2px;" 
+onclick="document.getElementById('answer2').style.opacity='1';
+document.getElementById('answer1').style.opacity='0';
+document.getElementById('answer3').style.opacity='0';
+document.getElementById('filter1').style.zIndex='2';
+document.getElementById('bossword0').style.opacity='0';
+document.getElementById('bossword5').style.opacity='0';
+document.getElementById('bossword7').style.opacity='1';
+document.getElementById('explain1').style.opacity='0';
+document.getElementById('explanation2').style.opacity='1';"> 
+Michael will win
+</div>
+<div class="choice3" style="padding-left:20px;padding-top:2px;" 
+onclick="document.getElementById('answer3').style.opacity='1';
+document.getElementById('answer1').style.opacity='0';
+document.getElementById('answer2').style.opacity='0';
+document.getElementById('filter1').style.zIndex='2';
+document.getElementById('bossword0').style.opacity='0';
+document.getElementById('bossword5').style.opacity='0';
+document.getElementById('bossword8').style.opacity='1';
+document.getElementById('explain1').style.opacity='0';
+document.getElementById('explanation3').style.opacity='1';"> 
+Jonathan will win 
+</div>
+
+<p class="normal"> Your Answer is... </p>
+<div id=answer1 style="padding-left:20px;padding-top:2px;"> <h2> Wrong </h2> </div>
+<div id=answer2 style="padding-left:20px;padding-top:2px;"> <h2> Correct </h2> </div>
+<div id=answer3 style="padding-left:20px;padding-top:2px;"> <h2> Wrong </h2> </div>
+
+<br> </br>   
+<div class="greenbar"> </div>
+<h2> <span style="color:white;"> a </span> Explanation </h2>
+<div class="greenbar"> </div>
+<p class=spaceword> haha i am space </p> 
+<p class=normal id=explain1> Answer the question first </p>
+<div id=explanation1> 
+	<p class=normal>  Ummmm you are close to correct, "michael will win" was the correct answer </p> 
+	<p class=normal>  Let's organize what happened </p>  
+	<p class=normal>  <u> Michael running 50 meters = Jonathan running 40 meters </u> </p> 
+	<p class=normal>  during the second race, Michael is running <u> 60 meters </u> </p>
+	<p class=normal>  when Michael run 50 meters, Jonathan run 40 meters = 10 meters left for both </p>
+	<p class=normal>  and Michael runs faster than Jonathan so he will win </p>
+</div>
+<div id=explanation2> 
+	<p class=normal>  Nice one, you are correct </p> 
+	<p class=normal>  Let's organize what happened </p>  
+	<p class=normal>  <u> Michael running 50 meters = Jonathan running 40 meters </u> </p> 
+	<p class=normal>  during the second race, Michael is running <u> 60 meters </u> </p>
+	<p class=normal>  when Michael run 50 meters, Jonathan run 40 meters = 10 meters left for both </p>
+	<p class=normal>  and Michael runs faster than Jonathan so he will win </p>
+</div>
+<div id=explanation3> 
+	<p class=normal>  "Michael will win" was the correct answer </p> 
+	<p class=normal>  Let's organize what happened </p>  
+	<p class=normal>  <u> Michael running 50 meters = Jonathan running 40 meters </u> </p> 
+	<p class=normal>  during the second race, Michael is running <u> 60 meters </u> </p>
+	<p class=normal>  when Michael run 50 meters, Jonathan run 40 meters = 10 meters left for both </p>
+	<p class=normal>  and Michael runs faster than Jonathan so he will win </p>
+</div>
+
+
+</div>
+
+<div id="midcolumn"> <p class=spaceword> haha i am space </p>
+
+<div class=bluebar> </div>
+<h2> <span style="color:white"> a </span> Table of Contents  </h2>
+<div class=bluebar> </div>
+<ul> 
+	<li> <a href="#i1"> Welcome </a> </li>
+	<li> <a href="#i2"> Question </a> </li>
+	<li> <a href="aboutus.html"> About Us </a> </li>
+	<li> Wait for updates... </li>
+</ul>
+<br> </br>
+<br> </br>
+<img src="images/afterpic1.png" width=100%>  </img>
+<br> </br>
+<img src="images/afterpic2.png" width=100%>  </img>
+<br> </br>
+<img src="images/afterpic3.png" width=100%>  </img>
+<br> </br>
+<img src="images/afterpic4.png" width=100%>  </img>
+
+</div>
+</div>
+
+<script>
+window.onscroll = function() {myFunction()};
+
+var header = document.getElementById("navbar");
+var sticky = header.offsetTop;
+
+function myFunction() {
+  if (window.pageYOffset > sticky) {
+    header.classList.add("sticky");
+  } else {
+    header.classList.remove("sticky");
+  }
+}
+</script>
+
+</BODY>
+</HTML>
