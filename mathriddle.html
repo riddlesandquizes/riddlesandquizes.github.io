@@ -5,12 +5,14 @@
 html {scroll-behavior: smooth;}
 body {background-color: #eaedf2;margin: 0;font-family: helvetica neue;overflow-x: hidden;}
 .normal{font-size:18px;line-height:2.3;}
+.content{font-size:18px;line-height:1;}
 ul {padding: 0;}
 ul li{color: #404040;border-left: solid 6px #1fa67a;
   border-bottom: solid 2px #dadada;background: whitesmoke;
   margin-bottom: 5px;line-height: 1.5;padding: 0.5em;
   list-style-type: none!important;font-weight: bold;}
 ul li:hover{box-shadow:0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);}
+ul a {color:#5C56D3;}
 ol {
   border: solid 2px #ffb03f;
   padding: 0.5em;
@@ -31,6 +33,25 @@ ol li:after {background: #ffb03f;
 #top1{}
 #top2{}
 #top3{}
+
+.first{padding: 0.25em 0.5em;color: black;font-size:28px;
+	background: transparent;border-left: solid 7px #7db4e6;}
+
+.button {z-index: 2;display: inline-block;position: relative;height: 45px;
+	text-align: center;box-sizing: border-box;cursor: pointer;}
+.button:before {content: '';position: absolute;width: 10px;bottom: -10px;
+	left: -35px;z-index: 1;border: 20px solid #56adf3;border-left-color: transparent;}
+.button:after {content: '';position: absolute;width: 10px;bottom: -10px;right: -35px;
+	z-index: 1;border: 20px solid #56adf3;border-right-color: transparent;}
+.button h3 {z-index: 2;display: inline-block;position: relative;
+	margin: 0;padding: 0 20px;line-height: 45px;
+	font-size: 18px;color: #FFF;background: #2196F3;}
+.button h3:before {z-index: 2;position: absolute;content: '';
+	top: 100%;left: 0;border: none;
+	border-bottom: solid 10px transparent;border-right: solid 15px #397eb5;}
+.button h3:after {z-index: 2;position: absolute;content: '';
+	top: 100%;right: 0;border: none;
+	border-bottom: solid 10px transparent;border-left: solid 15px #397eb5;}
 
 .footer {background-color: #303030;border:solid black 1px;color: lightslategrey;
 	padding: 30px 20px 15px 20px;text-align: left;bottom: 0;
@@ -116,12 +137,18 @@ font-size:19px; color: black; box-shadow:0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 2
 .bossword p {margin: 0;padding: 0;}
 
 #bossword0{position:fixed;top:150px;left:69.5%;z-index:-1;opacity:0;}
+#bossword1{position:fixed;top:150px;left:69.5%;z-index:-1;opacity:0;}
+#bossword2{position:fixed;top:150px;left:69.5%;z-index:-1;opacity:0;}
+#bossword3{position:fixed;top:150px;left:69.5%;z-index:-1;opacity:0;}
+#bossword4{position:fixed;top:150px;left:69.5%;z-index:-1;opacity:0;}
 
 #ourtitle{position: absolute;top:52px;left:8.5%;width:82%;height:100px;z-index:100;
 	box-shadow:0 5px 9px 0 rgba(0, 0, 0, 0.7), 0 7px 21px 0 rgba(0, 0, 0, 0.3);}
 
 .topbar{width:100%;height:7px;background-color:#18ccef;position:relative;z-index:1;}
 .greenbar{width:101%;height:4.5px;background-color:green;position:relative;z-index:1;
+border-radius: 100px / 50px}
+.bluebar1{width:101%;height:4.5px;background-color:#778eff;position:relative;z-index:1;
 border-radius: 100px / 50px}
 .bluebar{color: #516BDF;border: solid 3px #364e96;background-color:#DFE4F9;
 	padding: 0.5em;border-radius: 0.5em;position:relative;text-align: left;
@@ -151,19 +178,27 @@ border-radius: 100px / 50px}
 	box-shadow:0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);}
 #answer1{width:58%;height:84.5px;position:absolute;background-color:#ec3030;
 	color:white;font-size:18px;border-radius: 10px / 1px;text-shadow: 1px 1px 3px #000000;opacity:0;}
-#answer2{width:58%;height:84.5px;position:absolute;background-color:green;
+#answer2{width:58%;height:84.5px;position:absolute;background-color:#ec3030;
 	color:white;font-size:18px;border-radius: 10px / 1px;text-shadow: 1px 1px 3px #000000;opacity:0;}
-#answer3{width:58%;height:84.5px;position:absolute;background-color:#ec3030;
+#coanswer3{width:58%;height:84.5px;position:absolute;background-color:green;
 	color:white;font-size:18px;border-radius: 10px / 1px;text-shadow: 1px 1px 3px #000000;opacity:0;}
 #filter1{position:absolute;width:100%;height:178px;z-index:-2;background-color:black;opacity:0;}
 #explain1{position:absolute;opacity:1;}
-#explanation1{position:absolute;opacity:0;}
-#explanation2{position:absolute;opacity:0;}
-#explanation3{position:relative;opacity:0;}
+#explanation1{position:relative;opacity:0;}
+
+#answer4{width:58%;height:84.5px;position:absolute;background-color:#ec3030;
+	color:white;font-size:18px;border-radius: 10px / 1px;text-shadow: 1px 1px 3px #000000;opacity:0;}
+#answer5{width:58%;height:84.5px;position:absolute;background-color:#ec3030;
+	color:white;font-size:18px;border-radius: 10px / 1px;text-shadow: 1px 1px 3px #000000;opacity:0;}
+#coanswer6{width:58%;height:84.5px;position:absolute;background-color:green;
+	color:white;font-size:18px;border-radius: 10px / 1px;text-shadow: 1px 1px 3px #000000;opacity:0;}
+#filter2{position:absolute;width:100%;height:178px;z-index:-2;background-color:black;opacity:0;}
+#explain2{position:absolute;opacity:1;}
+#explanation2{position:relative;opacity:0;}
 </STYLE>
 <HEAD>
 
-<BODY link="#5C56D3" vlink="#5C56D3">
+<BODY link="#2c2c2c" vlink="2c2c2c">
 
 <div class="contents"> <div id="leftcontents"> </div> </div>
 
@@ -173,6 +208,14 @@ document.getElementById('bossword0').style.opacity='1';
 document.getElementById('filturt').style.zIndex='-4';"> </div>
 <div id=bossword0 class=bossword style="padding-left:20px;padding-top:2px;"> 
 <h2> Oh hi </h2> </div>
+<div id=bossword1 class=bossword style="padding-left:20px;padding-top:2px;" z-index=20> 
+You only have one chance to answer (unless if you reload the page, but I know you won't do that) </div> 
+<div id=bossword2 class=bossword style="padding-left:20px;padding-top:2px;" z-index=20> 
+nice one but you are wrong</div> 
+<div id=bossword3 class=bossword style="padding-left:20px;padding-top:2px;" z-index=20> 
+mistakes do not equal failure, so don't worry</div>
+<div id=bossword4 class=bossword style="padding-left:20px;padding-top:2px;" z-index=20> 
+Wow, you must be smart like someone named Joshua!</div>
 
 <div class=topbar> </div>
 <IMG src="images/titleword.png" id=ourtitle></IMG> 
@@ -231,65 +274,52 @@ About Us </A>
 
 <BR> </BR>
 
-<div class="column"> <div id="leftcolumn"> <p class=spaceword> haha i am space </p>
-<div class=bluebar> 
-<h2 id="i1"> <span style="color:#DFE4F9">a</span>Math Riddles! </h2> </div>
-
-<p class="normal"> <strong> <u> This page is not done yet!!! This page will be completed on 6/9 </u> </strong> </p>
+<div class="column"> <div id="leftcolumn"> <p class="spaceword"> haha i am space </p>
+<div class="bluebar"> 
+<h2> <span style="color:#DFE4F9">a</span>Math Riddles! </h2> </div>
+<p class="spaceword"> haha i am space </p>
+<span style="color:white">a</span><div class="button"> <h3> Easy Riddles </h3> </div>
+<p class="spaceword"> haha i am space </p>
 <ol> 
-	<li> <p class=normal> Visit your recommandation that turtle (our boss) gave you </p> </li>
-	<li> <p class=normal> Visit Math Riddles page </p> </li>
-	<li> <p class=normal> Visit Logic Puzzles page </p> </li>
+	<li> <p class="content"> <a href="#i1"> 1. Cost of products </a> </p> </li>
+		<li> <p class="content"> wait for updates... </p> </li>
 </ol>
-
-<p class=spaceword> haha i am space </p>
-
-
-<div class=bluebar> 
-<h2> <span style="color:#DFE4F9">a</span>What are Math Riddles and Logic Puzzles? </h2> </div> 
-
-<p class=spaceword> haha i am space </p> 
-
-<p class="normal"> In order to understand what Math Riddle and are, let's try it! </p>
-<p class=spaceword> haha i am space </p> 
+<p class="spaceword"> haha i am space </p>
+<span style="color:white">a</span><div class="button"> <h3> Difficult Riddles </h3> </div>
+<p class="spaceword"> haha i am space </p>
+<ol> 
+	<li> <p class="content"> <a href="#i2"> 1. Percentage of getting infected </a> </p> </li>
+	<li> <p class="content"> <a href="#i3"> 2. Using microwave </a> </p> </li>
+	<li> <p class="content"> <a href="#i4"> 3. How heavy is the stone? </a> </p> </li>
+	<li> <p class="content"> wait for updates... </p> </li>
+</ol>
+<p class="spaceword"> haha i am space </p>
+<span style="color:white">a</span><div class="button"> <h3> Super Diccifult Riddles</h3> </div>
+<p class="spaceword"> haha i am space </p>
+<ol> 
+	<li> <p class="content"> wait for updates... </p> </li>
+</ol>
+<p class="spaceword"> haha i am space </p>
 
 <div class="question" style="padding-left:20px;padding-top:2px;"> 
-<h2 id="i2">  Question </h2>
+<h2 id="i1">  Question </h2>
 </div>
-<img src="images/examapple.png" width=100%> </img>
-<p class="normal"> Michael and Jonathan were racing with 50 meters </p>
-<p class="normal"> Michael won the first time </p>
-<p class="normal"> When Michael ran up to 50 meters, Jonathan was running at 40 meters </p>
-<p class="normal"> For the second race, Michael step back 10 meters to start </p>
-<p class="normal"> Who won the second race? </p>
+<p class="spaceword"> haha i am space </p>
+<div class="first"> Cost of products </div>
+
+<p class="normal"> Eraser and pencil in total cost 60NT </p>
+<p class="normal"> Eraser costs 50NT higher than pencil </p>
+<p class="normal"> What is the cost of pencil? </p>
 
 <div class="greenbar"> </div>
 <h2> <span style="color:white;"> a </span> Let's Think </h2>
 <div class="greenbar"> </div>
-<p class=spaceword> haha i am space </p> 
-<p class=spaceword> haha i am space </p> 
-
-<div class="think1" style="padding-left:20px;padding-top:2px;" 
-onclick="document.getElementById('thinking1').style.opacity='1';"> 
-Organize Your Thoughts (click me) 
-</div>
-<div id=thinking1> 
-<p class="normal"> With the first race, </p>
-<p class="normal"> It concludes Michael running 50 meters = Jonathan running 40 meters </p>
-<p class="normal"> and of course, Michael runs faster than Jonathan does </p>
-<div class="think1" style="padding-left:20px;padding-top:2px;" 
-onclick="document.getElementById('hint1').style.opacity='1';"> 
-Need Hint? (click me)
-</div>
-<div id=hint1>
-<p class="normal"> Which means when Michael runs 100 meters, Jonathan runs 80 meters </p>
-</div>
-</div>
-
+<p class="spaceword"> haha i am space </p> 
+<p class="normal"> No hint for this riddle, answer the riddle with your thinking </p>
+<p class="spaceword"> haha i am space </p> 
 <div class="question" style="padding-left:20px;padding-top:2px;"> 
 <h2>  Solve </h2>
 </div> 
-<img src="images/exampleq.png" width=100%> </img>
 <p class="normal"> Click the answer you think is correct </p>
 
 <div id=filter1>
@@ -297,44 +327,64 @@ Need Hint? (click me)
 <div class="choice1" style="padding-left:20px;padding-top:2px;" 
 onclick="document.getElementById('answer1').style.opacity='1';
 document.getElementById('answer2').style.opacity='0';
-document.getElementById('answer3').style.opacity='0';
+document.getElementById('coanswer3').style.opacity='0';
 document.getElementById('filter1').style.zIndex='2';
 document.getElementById('bossword0').style.opacity='0';
-document.getElementById('bossword5').style.opacity='0';
-document.getElementById('bossword6').style.opacity='1';
+document.getElementById('bossword1').style.opacity='0';
+document.getElementById('bossword2').style.opacity='1';
 document.getElementById('explain1').style.opacity='0';
-document.getElementById('explanation1').style.opacity='1';"> 
-Race with result in tie 
+document.getElementById('explanation1').style.opacity='1';"
+onmouseover="
+document.getElementById('bossword0').style.opacity='0';
+document.getElementById('bossword1').style.opacity='1';
+document.getElementById('bossword2').style.opacity='0';
+document.getElementById('bossword3').style.opacity='0';
+document.getElementById('bossword4').style.opacity='0';
+document.getElementById('filturt').style.zIndex='-4';"> 
+10NT
 </div>  
 <div class="choice2" style="padding-left:20px;padding-top:2px;" 
 onclick="document.getElementById('answer2').style.opacity='1';
 document.getElementById('answer1').style.opacity='0';
-document.getElementById('answer3').style.opacity='0';
+document.getElementById('coanswer3').style.opacity='0';
 document.getElementById('filter1').style.zIndex='2';
-document.getElementById('bossword0').style.opacity='0';
-document.getElementById('bossword5').style.opacity='0';
-document.getElementById('bossword7').style.opacity='1';
+document.getElementById('bossword1').style.opacity='0';
+document.getElementById('bossword3').style.opacity='1';
 document.getElementById('explain1').style.opacity='0';
-document.getElementById('explanation2').style.opacity='1';"> 
-Michael will win
+document.getElementById('explanation1').style.opacity='1';"
+onmouseover="
+document.getElementById('bossword0').style.opacity='0';
+document.getElementById('bossword1').style.opacity='1';
+document.getElementById('bossword2').style.opacity='0';
+document.getElementById('bossword3').style.opacity='0';
+document.getElementById('bossword4').style.opacity='0';
+document.getElementById('filturt').style.zIndex='-4';"> 
+50NT
 </div>
 <div class="choice3" style="padding-left:20px;padding-top:2px;" 
-onclick="document.getElementById('answer3').style.opacity='1';
+onclick="document.getElementById('coanswer3').style.opacity='1';
 document.getElementById('answer1').style.opacity='0';
 document.getElementById('answer2').style.opacity='0';
 document.getElementById('filter1').style.zIndex='2';
 document.getElementById('bossword0').style.opacity='0';
-document.getElementById('bossword5').style.opacity='0';
-document.getElementById('bossword8').style.opacity='1';
+document.getElementById('bossword1').style.opacity='0';
+document.getElementById('bossword4').style.opacity='1';
 document.getElementById('explain1').style.opacity='0';
-document.getElementById('explanation3').style.opacity='1';"> 
-Jonathan will win 
+document.getElementById('explanation1').style.opacity='1';"
+onmouseover="
+document.getElementById('bossword0').style.opacity='0';
+document.getElementById('bossword1').style.opacity='1';
+document.getElementById('bossword2').style.opacity='0';
+document.getElementById('bossword3').style.opacity='0';
+document.getElementById('bossword4').style.opacity='0';
+document.getElementById('filturt').style.zIndex='-4';"> 
+5NT
 </div>
 
 <p class="normal"> Your Answer is... </p>
 <div id=answer1 style="padding-left:20px;padding-top:2px;"> <h2> Wrong </h2> </div>
-<div id=answer2 style="padding-left:20px;padding-top:2px;"> <h2> Correct </h2> </div>
-<div id=answer3 style="padding-left:20px;padding-top:2px;"> <h2> Wrong </h2> </div>
+<div id=answer2 style="padding-left:20px;padding-top:2px;"> <h2> Wrong </h2> </div>
+<div id=coanswer3 style="padding-left:20px;padding-top:2px;"> <h2> Correct </h2> </div>
 
 <br> </br>   
 <div class="greenbar"> </div>
@@ -343,29 +393,137 @@ Jonathan will win
 <p class=spaceword> haha i am space </p> 
 <p class=normal id=explain1> Answer the question first </p>
 <div id=explanation1> 
-	<p class=normal>  Ummmm you are close to correct, "michael will win" was the correct answer </p> 
-	<p class=normal>  Let's organize what happened </p>  
-	<p class=normal>  <u> Michael running 50 meters = Jonathan running 40 meters </u> </p> 
-	<p class=normal>  during the second race, Michael is running <u> 60 meters </u> </p>
-	<p class=normal>  when Michael run 50 meters, Jonathan run 40 meters = 10 meters left for both </p>
-	<p class=normal>  and Michael runs faster than Jonathan so he will win </p>
+	<p class=normal> The pencil costs 5NT</p>
+	<p class=normal> I think most of the people thought it was 10NT, but that is wrong</p>
+	<p class=normal> Let's make it into an equation (eraser as E and pencil as P) </p>
+	<p class=normal></p>
+	<p class=normal> E+P=60 and E=P+50 </p>
+	<p class=normal> 
+	If pencil costs 10NT... <u> E=10+50=60NT E+P=60+10=70NT which does not make sense </u> </p>
+	<p class=normal> If pencil costs 5NT... <u> E=5+50=55NT E+P=55+5=60NT </u> </p>
+	<p class=normal> So the answer is <u> pencil costs 5NT </u> </p>
 </div>
-<div id=explanation2> 
-	<p class=normal>  Nice one, you are correct </p> 
-	<p class=normal>  Let's organize what happened </p>  
-	<p class=normal>  <u> Michael running 50 meters = Jonathan running 40 meters </u> </p> 
-	<p class=normal>  during the second race, Michael is running <u> 60 meters </u> </p>
-	<p class=normal>  when Michael run 50 meters, Jonathan run 40 meters = 10 meters left for both </p>
-	<p class=normal>  and Michael runs faster than Jonathan so he will win </p>
+
+<div class="question" style="padding-left:20px;padding-top:2px;"> 
+<h2 id="i2">  Question </h2>
 </div>
-<div id=explanation3> 
-	<p class=normal>  "Michael will win" was the correct answer </p> 
-	<p class=normal>  Let's organize what happened </p>  
-	<p class=normal>  <u> Michael running 50 meters = Jonathan running 40 meters </u> </p> 
-	<p class=normal>  during the second race, Michael is running <u> 60 meters </u> </p>
-	<p class=normal>  when Michael run 50 meters, Jonathan run 40 meters = 10 meters left for both </p>
-	<p class=normal>  and Michael runs faster than Jonathan so he will win </p>
+<p class="spaceword"> haha i am space </p>
+<div class="first"> Percentage of Getting Infected </div>
+
+<p class="normal"> There is a virus where 1/10000 of turtle gets infected </p>
+<p class="normal"> The doctor has accuracy of 99% to see if a turtle is infected or not </p>
+<p class="normal"> A turtle went to check and the doctor said the turtle is infected </p>
+<p class="normal"> What will be the actual percentage for the turtle to be infected? </p>
+
+<div class="greenbar"> </div>
+<h2> <span style="color:white;"> a </span> Let's Think </h2>
+<div class="greenbar"> </div>
+<p class="spaceword"> haha i am space </p> 
+<p class="normal"> No hint for this riddle, answer the riddle with your thinking </p>
+<p class="spaceword"> haha i am space </p> 
+<div class="question" style="padding-left:20px;padding-top:2px;"> 
+<h2>  Solve </h2>
+</div> 
+<p class="normal"> Click the answer you think is correct </p>
+
+<div id=filter2>
 </div>
+<div class="choice1" style="padding-left:20px;padding-top:2px;" 
+onclick="document.getElementById('answer4').style.opacity='1';
+document.getElementById('answer5').style.opacity='0';
+document.getElementById('coanswer6').style.opacity='0';
+document.getElementById('filter2').style.zIndex='2';
+document.getElementById('bossword0').style.opacity='0';
+document.getElementById('bossword1').style.opacity='0';
+document.getElementById('bossword2').style.opacity='1';
+document.getElementById('explain2').style.opacity='0';
+document.getElementById('explanation2').style.opacity='1';"
+onmouseover="
+document.getElementById('bossword0').style.opacity='0';
+document.getElementById('bossword1').style.opacity='1';
+document.getElementById('bossword2').style.opacity='0';
+document.getElementById('bossword3').style.opacity='0';
+document.getElementById('bossword4').style.opacity='0';
+document.getElementById('filturt').style.zIndex='-4';"> 
+97% 
+</div>  
+<div class="choice2" style="padding-left:20px;padding-top:2px;" 
+onclick="document.getElementById('answer4').style.opacity='0';
+document.getElementById('answer5').style.opacity='0';
+document.getElementById('coanswer6').style.opacity='1';
+document.getElementById('filter2').style.zIndex='2';
+document.getElementById('bossword1').style.opacity='0';
+document.getElementById('bossword4').style.opacity='1';
+document.getElementById('explain2').style.opacity='0';
+document.getElementById('explanation2').style.opacity='1';"
+onmouseover="
+document.getElementById('bossword0').style.opacity='0';
+document.getElementById('bossword1').style.opacity='1';
+document.getElementById('bossword2').style.opacity='0';
+document.getElementById('bossword3').style.opacity='0';
+document.getElementById('bossword4').style.opacity='0';
+document.getElementById('filturt').style.zIndex='-4';"> 
+1%
+</div>
+<div class="choice3" style="padding-left:20px;padding-top:2px;" 
+onclick="document.getElementById('answer4').style.opacity='0';
+document.getElementById('answer5').style.opacity='1';
+document.getElementById('coanswer6').style.opacity='0';
+document.getElementById('filter2').style.zIndex='2';
+document.getElementById('bossword0').style.opacity='0';
+document.getElementById('bossword1').style.opacity='0';
+document.getElementById('bossword3').style.opacity='1';
+document.getElementById('explain2').style.opacity='0';
+document.getElementById('explanation2').style.opacity='1';"
+onmouseover="
+document.getElementById('bossword0').style.opacity='0';
+document.getElementById('bossword1').style.opacity='1';
+document.getElementById('bossword2').style.opacity='0';
+document.getElementById('bossword3').style.opacity='0';
+document.getElementById('bossword4').style.opacity='0';
+document.getElementById('filturt').style.zIndex='-4';"> 
+99% 
+</div>
+
+<p class="normal"> Your Answer is... </p>
+<div id="answer4" style="padding-left:20px;padding-top:2px;"> <h2> Wrong </h2> </div>
+<div id="answer5" style="padding-left:20px;padding-top:2px;"> <h2> Wrong </h2> </div>
+<div id="coanswer6" style="padding-left:20px;padding-top:2px;"> <h2> Correct </h2> </div>
+
+<br> </br>   
+<div class="greenbar"> </div>
+<h2> <span style="color:white;"> a </span> Explanation </h2>
+<div class="greenbar"> </div>
+<p class="spaceword"> haha i am space </p> 
+<p class="normal" id="explain2"> Answer the question first </p>
+<div id="explanation2"> 
+	<p class="normal"> The answer is <strong> <u> 1% </u> </strong> </p>
+	<p class="normal"> We need to understand two points of this riddle: </p>
+	<p class="normal"> 1/10,000 of turtle gets infected, 
+	and doctor has accuracy of 99% to see if a turtle is infected or not </p>
+	<p class="normal"> if 1/1,000 of turtle is infected, 
+	there would be 100/1,000,000 turtles getting infected </p>
+	<p class="normal"> <u> infected: 100 / non-infected: 999,900 </u> </p>
+	<p class=normal> and the accuracy to see if a turtle is <u> infected or not is 99% </u> </p>
+	<p class=normal> which concludes within those 100 infected turtles,  
+	<u> 99 of turtles </u> will <strong> correctly be investigated as infected </strong> 
+	whereas <u> 1 turtle </u> will <strong> incorrectly be investigated as non-infected </strong> </p>
+	<p class="normal"> which also concludes within those 999,900 non-infected turtles, 
+	<u> 989,901 of turtles </u> will <strong> correctly be investigated as not infected </strong> 
+	whereas <u> 9999 turtles </u> will <strong> incorrectly be investigated as infected </strong> </p>
+	<p class="normal"> Which means the doctor investigated <u> 99 + 9999 turtles as infected </u>, 
+	which would be 10098 turtles
+	<p class="normal"> However, within those 10098 turtles, only 99 turtles are infected </p>
+	<p class="normal"> <strong> 99/10098≒<u>0.01</u> </strong> </p>
+	<p class="normal"> Which concludes even though a turtle was investigated as infected by the doctor, 
+	<u> the accuracy of actually having a turtle to be infected is just 1% </u> </p>
+</div>
+<h2 id="i4"> </h2>
+<div class="greenbar"> </div>
+<h2 id="i3"> <span style="color:white;"> a </span> Wait for updates... </h2>
+<div class="greenbar"> </div>
+
+<br> </br> 
 
 <div class="footer"><div class="f-contain"><div class="f-links">
 <h4 class="f-first"> Newest Pages </h4>
@@ -393,11 +551,12 @@ Jonathan will win
 
 <div id="midcolumn"> <p class=spaceword> haha i am space </p>
 
-<div class=bluebar> 
-<h2> <span style="color:#DFE4F9">a</span>Table of Contents  </h2> </div>
+<div class=bluebar1> </div>
+<h2> <span style="color:white"> a </span> Table of Contents  </h2> 
+<div class=bluebar1> </div>
 <ul> 
-	<li> <a href="#i1"> Welcome </a> </li>
-	<li> <a href="#i2"> Question </a> </li>
+	<li> <a href="index.html"> Home </a> </li>
+	<li> <a href="logicpuzzle.html"> Logic Puzzles </a> </li>
 	<li> <a href="aboutus.html"> About Us </a> </li>
 	<li> Wait for updates... </li>
 </ul>
